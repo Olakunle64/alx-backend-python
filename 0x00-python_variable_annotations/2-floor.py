@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function named <floor> which takes a float arg
     and return the floor of the float
 """

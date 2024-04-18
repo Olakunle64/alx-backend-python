@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function named <sum_mixed_list which takes a list
     of integers and floats and return their sum as a float
 """

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function named <to_str> that takes
     in a float arg and return the string representation of
     the float.

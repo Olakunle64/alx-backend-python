@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function named <safe_first_element that takes
     in a list containing any element and return
     any element or None

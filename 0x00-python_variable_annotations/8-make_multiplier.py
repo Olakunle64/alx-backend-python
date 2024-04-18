@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function that takes in a float and return
     a function that multiply a float by multiplier
 """

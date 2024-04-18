@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function named <to_kv> that takes a string k and
     an int or a float v and return a tuple containing the two args
 """

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function named <add> that add two floats and
     return a float as the result of the addition
 """

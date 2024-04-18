@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """This module has a function named <concat> that takes two
     string arguments and return the concatenation of the two
 """
