@@ -5,7 +5,7 @@ import random
 import asyncio
 
 
-async def wait_random(max_delay: float = 10) -> float:
+async def wait_random(max_delay: int = 10) -> float:
     """This function uses asynchrounous coroutine that
         takes in an integer argument <max_delay> with a
         default value of 10 that waits for a random delay
