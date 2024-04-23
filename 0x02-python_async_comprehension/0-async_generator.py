@@ -3,11 +3,11 @@
     no arguments
 """
 import asyncio
-from typing import AsyncIterator
+from typing import Generator
 import random
 
 
-async def async_generator() -> AsyncIterator[float]:
+async def async_generator() -> Generator[float, None, None]:
     """
         Asynchronous generator that yields random floating-point
         numbers between 1 and 10.
