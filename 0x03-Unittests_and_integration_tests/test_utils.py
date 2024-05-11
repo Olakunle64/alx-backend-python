@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This module has a unit test for utils.access_nested_map"""
+"""This module has unit tests and integration"""
 from parameterized import parameterized
 from utils import access_nested_map, get_json, memoize
 import unittest
