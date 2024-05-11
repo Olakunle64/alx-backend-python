@@ -23,3 +23,13 @@ class TestGithubOrgClient(unittest.TestCase):
         mock_get_json.assert_called_once_with(
             "https://api.github.com/orgs/{}".format(org)
             )
+
+    @parameterized.expand([
+        ("google", {"payload": False})
+    ])
+    @patch.object(GithubOrgClient, "_public_repos_url")
+    def test_public_repos_url(self, org, payload, mock_p_repos_url):
+        "Test the GithubOrgClient._public_repos_url method"
+        mock_p_repos_url.return_value = payload
+        client = GithubOrgClient(org)
+        self.assertEqual(client._public_repos_url(), payload)
