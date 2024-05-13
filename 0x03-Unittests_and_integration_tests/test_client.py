@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """This module has a unit tests for several functions"""
 from parameterized import parameterized, parameterized_class
-from unittest.mock import patch, Mock
+from unittest.mock import patch, Mock, PropertyMock
 import unittest
 from client import GithubOrgClient
 import requests
@@ -56,13 +56,15 @@ class TestGithubOrgClient(unittest.TestCase):
     def test_public_repos(self, org, payload, mock_get_json):
         "Test the GithubOrgClient.public_repos"
         mock_get_json.return_value = payload
-        with patch.object(GithubOrgClient, "_public_repos_url") as mock_p:
+        with patch.object(
+            GithubOrgClient, "_public_repos_url", new_callable=PropertyMock
+        ) as mock_p:
             mock_p.return_value = payload[0]["repos_url"]
             client = GithubOrgClient(org)
             self.assertEqual(
                 client.public_repos(), [repo["name"] for repo in payload]
                 )
-        mock_get_json.assert_called_once_with(mock_p)
+        mock_get_json.assert_called_once()
 
     @parameterized.expand([
         ({"license": {"key": "my_license"}}, "my_license", True),
